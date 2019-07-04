@@ -1,0 +1,8 @@
+DirectoryIndex home.php
+#Fix Rewrite
+Options -Multiviews
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php?PATH_INFO=$1 [L,QSA]
+Header set Access-Control-Allow-Origin 'origin-list'
