@@ -1,71 +1,178 @@
-<h2 id="btnResultados" style="cursor:pointer">Resultados por Subasta</h2>
-<div style="height:300px; overflow:auto;width:100%" id="contenedor_tabla">
-<table id="tblResultadosSubastas" class="responsive-table striped">
-	<thead>
-		<tr>
-			<th>Nombre</th>
-			<th class='center-align'>Fecha Inicio</th>
-			<th class='center-align'>Fecha Fin</th>
-			<th class='center-align'>Estatus</th>
-			<th class='center-align'>Tipo de subasta</th>
-			<th class='center-align'>Empresa(s)</th>
-			<th class='center-align'>Total participantes</th>
-			<th class='center-align'>Total autos</th>
-			<th class='center-align'>Total pujas</th>
-			<th class='center-align'>Revisar resultados DESC</th>
-			<!-- <th class='center-align'>Revisar resultados ASC</th>
-			<th class='center-align'>Revisar resultados MAX</th> -->
-		</tr>
-	</thead>
-	<tbody></tbody>
-</table>
-</div>
-<div style="height:300px; overflow:auto;width:100%" id="contenedor_tabla_ganadores">
-<table id="tblGanadores" class="responsive-table striped">
-	<thead>
-		<tr>
-			<td id="thNombreSubasta" class='center-align' colspan="8"></td>
-		</tr>
-		<tr>
-			<th class='center-align'>Foto</th>
-			<th class='center-align'>Marca</th>
-			<th class='center-align'>Modelo</th>
-			<th class='center-align'>Año</th>
-			<th class='center-align'>Precio</th>
-			<th class='center-align'>Ganador</th>
-			<th class='center-align'>Oferta ganadora</th>
-			<th class='center-align'>Hora de la oferta</th>
-			<th class='center-align'>Ganancia</th>
-			<th class='center-align'>Detalle de ofertas</th>
-		</tr>
-	</thead>
-	<tbody>
+<!DOCTYPE html>
+<html lang="en">
 
-	</tbody>
-</table>
-</div>
-<div id="divTotalOfertas" class="modal bottom-sheet">
-	<div class="modal-footer">
+        <aside class="left-sidebar">
+            <div class="d-flex no-block nav-text-box align-items-center">
+                <span><img src="../Backend/assets/images/logo-icon.png" alt="elegant admin template"></span>
+                <a class="waves-effect waves-dark ml-auto hidden-sm-down" href="javascript:void(0)"><i class="ti-menu"></i></a>
+                <a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+            </div>
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li > 
+                            <a class="waves-effect waves-dark" name="index" aria-expanded="false">
+                            <i class="fa fa-home"></i>
+                            <span class="hide-menu">inicio</span>
+                            </a>
+                        </li>
+                        <li > 
+                            <a class="menuitemindex" name="useradmin" class="waves-effect waves-dark"aria-expanded="false">
+                            <i class="fa fa-user-circle-o"></i>
+                            <span class="hide-menu">Usuarios</span>
+                            </a>
+                        </li>
+                        <li > 
+                            <a  class="menuitemindex" name="subastasadmin" class="waves-effect waves-dark"  aria-expanded="false">
+                            <i class="fa fa-legal"></i>
+                            <span class="hide-menu">Administrador Subastas</span></a>
+                        </li>
+                        <li > 
+                            <a class="menuitemindex" name="altaautos" class="waves-effect waves-dark"  aria-expanded="false">
+                            <i class="fa fa-car"></i>
+                            <span class="hide-menu">Administrador Autos</span></a>
+                        </li>
+                        <li > 
+                            <a  class="menuitemindex" name="resultados" class="waves-effect waves-dark"  aria-expanded="false">
+                            <i class="fa fa-check-square-o"></i>
+                            <span class="hide-menu"></span>Resultados Subastas</a>
+                        </li>
+                        <li > 
+                            <a class="menuitemindex" name="cotizaciones" class="waves-effect waves-dark"  aria-expanded="false">
+                            <i class="fa fa-file-text"></i>
+                            </span>Cotizacion</a>
+                        </li>
+                       <li > 
+                            <a class="menuitemindex" name="homeadmin" class="waves-effect waves-dark"  aria-expanded="false">
+                            <i class="fa fa-pencil"></i>
+                            <span class="hide-menu"></span>Administrador Home</a>
+                    </li>
+                        <li > 
+                            <a class="menuitemindex" name="contactanos" class="waves-effect waves-dark" aria-expanded="false">
+                            <i class="fa fa-envelope"></i>
+                            <span class="hide-menu"></span>Contactanos</a>
+                    </li>
+                       <div class="text-center m-t-30">
+                            <a name="registro" href="registro" class="btn waves-effect waves-light btn-success hidden-md-down">registro</a>
+                        </div>
+                        
 
-			<a href="#!" class="modal-action modal-close waves-effect waves-green btn red tooltipped" data-position="top" data-delay="50" data-tooltip="Cerrar"><i class="material-icons">clear</i></a>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+       </aside>
 
-	</div>
-	<div id="tblTotalOfertas" class="modal-content divRegistro">
-		<table class="responsive-table striped">
-			<thead>
-				<tr>
-					<th class='center-align'>Usuario</th>
-					<th class='center-align'>Oferta</th>
-					<th class='center-align'>Fecha de la oferta</th>
-					<th class='center-align'>Ganador</th>
-					<th class='center-align'>Estatus</th>
-					<th class='center-align'>Motivo</th>
-				</tr>
-			</thead>
-			<tbody id="tblTotalOfertasBody">
+<body class="skin-default-dark fixed-layout">
+    
 
-			</tbody>
-		</table>
-	</div>
+    <div id="main-wrapper">
 
-</div>
+        <div class="page-wrapper">
+
+            <div class="container-fluid">
+
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h4 class="text-themecolor">Usuarios</h4>
+                    </div>
+                    <div class="col-md-7 align-self-center text-right">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">Inicio</a></li>
+                                <li class="breadcrumb-item active">Usuarios</li>
+                            </ol>
+                            <a class="btn btn-success d-none d-lg-block m-l-15"> </a>
+                        </div>
+                    </div>
+                </div>
+
+            <h2>Resultados por Subasta</h2>
+
+            <div id=" contenedor_tabla" >
+
+              <table id="tblResultadosSubastas" class="table" >
+                <thead class="thead-dark">
+                  <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Fecha inicio</th>
+                    <th scope="col">Fecha fin</th>
+                    <th scope="col">Estatus</th>
+                    <th scope="col">Tipo de subasta</th>
+                    <th scope="col">Empresa</th>
+                    <th scope="col">Total participantes</th>
+                    <th scope="col">Total autos</th>
+                    <th scope="col">Total pujas</th>
+                    <th scope="col">Revisar resultados DESC</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+
+             </div>
+
+            <div id=" contenedor_tabla_ganadores" >
+
+              <table id="tblGanadores" class="table" >
+                <thead class="thead-dark">
+                  <tr>
+                    <th class='col'>Foto</th>
+                    <th class='col'>Marca</th>
+                    <th class='col'>Modelo</th>
+                    <th class='col'>Año</th>
+                    <th class='col'>Precio</th>
+                    <th class='col'>Ganador</th>
+                    <th class='col'>Oferta ganadora</th>
+                    <th class='col'>Hora de la oferta</th>
+                    <th class='col'>Ganancia</th>
+                    <th class='col'>Detalle de ofertas</th>
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+
+             </div>
+
+            <div  class="modal bottom-sheet">
+    <div class="">
+
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn red tooltipped" data-position="top" data-delay="50" data-tooltip="Cerrar"><i class="material-icons">clear</i></a>
+
+    </div>
+              <table id="tblTotalOfertas" class="modal-content divRegistro" class="table" >
+                <thead class="thead-dark">
+                  <tr>
+                    <th class='col'>Usuario</th>
+                    <th class='col'>Oferta</th>
+                    <th class='col'>Fecha de la oferta</th>
+                    <th class='col'>Ganador</th>
+                    <th class='col'>Estatus</th>
+                    <th class='col'>Motivo</th>
+                  </tr>
+                </thead>
+            <tbody id="tblTotalOfertasBody">
+
+            </tbody>
+                <tbody>
+
+                </tbody>
+              </table>
+
+             </div>
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+    
+</html>
+

@@ -1,20 +1,122 @@
-<h2>Administrador de usuarios</h2>
-<div id="divAdminHomeContenido">
-
-  <table class="table" id="listaUsuarios">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col"><a id="btnAgregarUsuario" class="btn-floating btn-large waves-effect waves-light blue lighten-2 tooltipped" data-position="top" data-delay="50" data-tooltip="Agregar Subasta" data-tooltip-id="96e35dae-663b-9632-7a36-c4a13b4b446b"><i class="material-icons">add</i></a>#</th>
-        <th scope="col">Nombre</th>
-        <th scope="col">Correo</th>
-        <th scope="col">Teléfono</th>
-        <th scope="col">Opciones</th>
-      </tr>
-    </thead>
-    <tbody>
-
-    </tbody>
-  </table>
+ <!DOCTYPE html>
+<html lang="en">
 
 
-</div>
+
+<aside class="left-sidebar">
+            <div class="d-flex no-block nav-text-box align-items-center">
+                <span><img src="../Backend/assets/images/logo-icon.png" alt="elegant admin template"></span>
+                <a class="waves-effect waves-dark ml-auto hidden-sm-down" href="javascript:void(0)"><i class="ti-menu"></i></a>
+                <a class="nav-toggler waves-effect waves-dark ml-auto hidden-sm-up" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+            </div>
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li > 
+                            <a class="waves-effect waves-dark" name="index" aria-expanded="false">
+                            <i class="fa fa-home"></i>
+                            <span class="hide-menu">inicio</span>
+                            </a>
+                        </li>
+                        <li > 
+                            <a class="menuitemindex" name="useradmin" class="waves-effect waves-dark"aria-expanded="false">
+                            <i class="fa fa-user-circle-o"></i>
+                            <span class="hide-menu">Usuarios</span>
+                            </a>
+                        </li>
+                        <li > 
+                            <a  class="menuitemindex" name="subastasadmin" class="waves-effect waves-dark"  aria-expanded="false">
+                            <i class="fa fa-legal"></i>
+                            <span class="hide-menu">Administrador Subastas</span></a>
+                        </li>
+                        <li > 
+                            <a class="menuitemindex" name="altaautos" class="waves-effect waves-dark"  aria-expanded="false">
+                            <i class="fa fa-car"></i>
+                            <span class="hide-menu">Administrador Autos</span></a>
+                        </li>
+                        <li > 
+                            <a  class="menuitemindex" name="resultados" class="waves-effect waves-dark"  aria-expanded="false">
+                            <i class="fa fa-check-square-o"></i>
+                            <span class="hide-menu"></span>Resultados Subastas</a>
+                        </li>
+                        <li > 
+                            <a class="menuitemindex" name="cotizaciones" class="waves-effect waves-dark"  aria-expanded="false">
+                            <i class="fa fa-file-text"></i>
+                            </span>Cotizacion</a>
+                        </li>
+                       <li > 
+                            <a class="menuitemindex" name="homeadmin" class="waves-effect waves-dark"  aria-expanded="false">
+                            <i class="fa fa-pencil"></i>
+                            <span class="hide-menu"></span>Administrador Home</a>
+                    </li>
+                        <li > 
+                            <a class="menuitemindex" name="contactanos" class="waves-effect waves-dark" aria-expanded="false">
+                            <i class="fa fa-envelope"></i>
+                            <span class="hide-menu"></span>Contactanos</a>
+                    </li>
+                       <div class="text-center m-t-30">
+                            <a name="registro" href="registro" class="btn waves-effect waves-light btn-success hidden-md-down">registro</a>
+                        </div>
+                        
+
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+       </aside>
+
+<body class="skin-default-dark fixed-layout">
+    <div id="main-wrapper">
+
+        <div class="page-wrapper">
+
+            <div class="container-fluid">
+
+                <div class="row page-titles">
+                    <div class="col-md-5 align-self-center">
+                        <h4 class="text-themecolor">Usuarios</h4>
+                    </div>
+                    <div class="col-md-7 align-self-center text-right">
+                        <div class="d-flex justify-content-end align-items-center">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="javascript:void(0)">Inicio</a></li>
+                                <li class="breadcrumb-item active">Usuarios</li>
+                            </ol>
+                            <a class="btn btn-success d-none d-lg-block m-l-15"> </a>
+                        </div>
+                    </div>
+                </div>
+
+            <h2>Administrador de usuarios</h2>
+            <div id="divAdminHomeContenido">
+
+              <table class="table" id="listaUsuarios">
+                <thead class="thead-dark">
+                  <tr>
+                     <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Correo</th>
+                    <th scope="col">Teléfono</th>
+                  
+                  </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+              </table>
+                        </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>
+

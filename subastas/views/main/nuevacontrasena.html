@@ -1,46 +1,72 @@
-<div class="registroMain row">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V9</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<div class="col s12">
-		<!-- INPUT APELLIDO MATERNO -->
-		<div class="row">
-			<div class="input-field col s12">
-				<input name="email" id="registroMail" type="email" class="validate" autocomplete="off">
-				<label for="email">Correo electrónico:</label>
-			</div>
-		</div>
-		<div class="row">
-			<div class="input-field col s12">
-				<input name="claveapi" id="claveApi" type="text" class="validate" onblur="validaCodigoVericacion(this);" autocomplete="off">
-				<label for="claveapi">Código de verificación:</label>
-			</div>
-		</div>
-		<!-- INPUT PASSWORD -->
-		<div class="row" id="rowContrasena">
-			<div class="input-field col s12">
-				<input name="password" id="registroPassword" type="password" class="validate" onkeyup="validaStrongPassword(this);">
-				<label for="password">Contraseña:</label>
-				<div id="divValidaPassword" class="validaRegistro" style="display:none" >El password debe contener al menos una letra mayúscula, al menos una letra minúscula, al menos un número, al menos un caracter especial ([! @ # $ % ^ & *), y una longitud mínima de 8 caracteres </div>
-			</div>
-		</div>
-		<!-- INPUT CONFIRMA PASSWORD -->
-		<div class="row" id="rowRepetirContrasena">
-			<div class="input-field col s12">
-				<input name="repetirPass" id="registroRepetirPass" type="password" class="validate" onkeyup="validaRepetirPassword(this);">
-				<label for="password">Repetir contraseña:</label>
-				<div id="divValidaRepetirPassword" class="validaRegistro" style="display:none" >El password no coincide </div>
-			</div>
+	<link rel="icon" type="image/png" href="Login_v9/images/icons/favicon.ico"/>
 
-		</div>
-		
-		<!-- BOTON GUARDAR -->
-		<div class="divRegistro registro">
-			<div id="btnNuevaContrasena" class="btnGuardar">
-				Guardar
-			</div>
-		</div>
+	<link rel="stylesheet" type="text/css" href="Login_v9/vendor/bootstrap/css/bootstrap.min.css">
 
-	</div>
-	<div id="modalNuevaContrasena" class="modal bottom-sheet">
+	<link rel="stylesheet" type="text/css" href="Login_v9/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/fonts/iconic/css/material-design-iconic-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/vendor/animate/animate.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/vendor/css-hamburgers/hamburgers.min.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/vendor/animsition/css/animsition.min.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/vendor/select2/select2.min.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/vendor/daterangepicker/daterangepicker.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/css/util.css">
+	<link rel="stylesheet" type="text/css" href="Login_v9/css/main.css">
+
+</head>
+<body>
+	
+	
+	<div id="btnRecuperar" class="container-login100" style="background-image: url('Login_v9/images/bg-01.jpg');">
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+
+			<div class="login100-form validate-form">
+
+				<span class="login100-form-title p-b-37">
+					Recuperacion de Contraeña
+				</span>
+
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Email">
+					<input id="registroMail" class="input100"  type="email"  placeholder="Correo">
+				</div>
+
+				<div class="wrap-input100 validate-input m-b-20">
+					<input id="claveApi" name="claveapi" class="input100"   type="email" onblur="validaCodigoVericacion(this);" placeholder="Código de verificación">
+				</div>
+
+				<div class="wrap-input100 validate-input m-b-20" data-validate = "Debe contener una letra mayúscula,un número,un caracter especial">
+					<input id="registroPassword" name="claveapi" class="input100" id="loginMail"  type="password" onkeyup="validaStrongPassword(this);"  placeholder="Nueva Contraseña">
+				</div>	
+
+				<!-- INPUT CONFIRMA PASSWORD -->
+				<div class="wrap-input100 validate-input m-b-20" id="rowRepetirContrasena">
+					<div class="input-field col s12">
+						<input class="input100" name="repetirPass" id="registroRepetirPass" type="password" onkeyup="validaRepetirPassword(this);" placeholder="Repetir Contraseña">
+						<div id="divValidaRepetirPassword" class="validaRegistro" style="display:none" >El password no coincide </div>
+					</div>
+
+				</div>	
+					
+				<div  class="container-login100-form-btn">
+					<button id="btnNuevaContrasena" class="login100-form-btn">
+						Recuperar Contraseña
+					</button>
+				</div>
+
+		<div id="modalNuevaContrasena" class="modal bottom-sheet">
 	    <div class="modal-content">
 	      <p>Se cambió su contraseña exitosamente.</p>
 	    </div>
@@ -51,6 +77,37 @@
 
 	<div class="divRegistro registro validaCodigoVericacion">
 
+	</div>	
+
+<br><br><br>
+
+			</div>
+
+		</div>
 	</div>
 
-</div>
+	
+
+	<div id="dropDownSelect1">
+	
+<!--===============================================================================================-->
+	<script src="Login_v9/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Login_v9/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Login_v9/vendor/bootstrap/js/popper.js"></script>
+	<script src="Login_v9/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Login_v9/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Login_v9/vendor/daterangepicker/moment.min.js"></script>
+	<script src="Login_v9/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="Login_v9/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="Login_v9/js/main.js"></script>
+
+	</div>
+
+</body>
+</html>

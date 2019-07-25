@@ -1,9 +1,10 @@
-var siteurl = "http://escuderiaservicios.com/subastas/";
- 
+/* var siteurl = "http://escuderiaservicios.com/subastas/";
+ */ 
+var siteurl = "http://localhost/Escuderia2019-master/subastas/";
 function postrequest(url, data, complete, fnerror){
 
 
-	$.ajax({
+  $.ajax({
       dataType: "json",
       url: siteurl+url,
       data: data,
@@ -11,13 +12,13 @@ function postrequest(url, data, complete, fnerror){
       async:false, 
       success:complete,
       error:fnerror
-       	
+        
     });
 
 }
 
-
+///Omite "www." que sea escrita en la URL
 var fooUrl = document.URL;
 if(fooUrl.indexOf("www.") > -1){
-	window.location.href = fooUrl.replace("www.","");
+  window.location.href = fooUrl.replace("www.","");
 }

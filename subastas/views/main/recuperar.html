@@ -1,26 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V9</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<link rel="icon" type="image/png" href="Login_v9/images/icons/favicon.ico"/>
 
-<div class="divLogin row">
-	<form class="floatingWindow">
-		<div class="logoCar"></div>
-		<div class="logoLogin"></div>
+	<link rel="stylesheet" type="text/css" href="Login_v9/vendor/bootstrap/css/bootstrap.min.css">
 
-		<div class="input-field col s10 offset-s1">
-			<input id="mail" type="email" name="email" class="validate">
-			<label for="email">Correo Electrónico..</label>
-		</div>
-		<div class="divRegistro login">
-			<div id="btnRecuperar" class="btnLogin">
-				RECUPERAR CONTRASEÑA <i class="fa fa-spinner fa-spin" id="spinBtnRecuperar" style="font-size:24px;display:none"></i>
+	<link rel="stylesheet" type="text/css" href="Login_v9/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/fonts/iconic/css/material-design-iconic-font.min.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/vendor/animate/animate.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/vendor/css-hamburgers/hamburgers.min.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/vendor/animsition/css/animsition.min.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/vendor/select2/select2.min.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/vendor/daterangepicker/daterangepicker.css">
+
+	<link rel="stylesheet" type="text/css" href="Login_v9/css/util.css">
+	<link rel="stylesheet" type="text/css" href="Login_v9/css/main.css">
+
+</head>
+<body>
+	
+	
+	<div  class="container-login100" style="background-image: url('Login_v9/images/bg-01.jpg');">
+		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30">
+			<div class="login100-form validate-form">
+				<span class="login100-form-title p-b-37">
+					Recuperar Contraseña
+				</span>
+
+				<div class="wrap-input100 validate-input m-b-20" data-validate="Email">
+					<input id="mail" class="input100" type="email"  placeholder="Correo de la clave a recuperar">
+				</div>
+					
+				<div id="btnRecuperar" class="container-login100-form-btn">
+					<button id="btnRecuperaLink" class="login100-form-btn">
+						Recuperar Contraseña
+					</button>
+				</div>
+
+		
+
+<br><br><br>
+
 			</div>
+
 		</div>
-	</form>
-	<div id="modalRecupera" class="modal bottom-sheet">
-	    <div class="modal-content">
-	      <p>Le env&iacute;amos un correo con un c&oacute;digo adjunto para recuperar su contrase&ntilde;a, por favor revise su bandeja de entrada. Recuerde que el correo podr&iacute;a llegar a la bandeja de spam o correo no deseado.</p>
-	    </div>
-	    <div class="modal-footer">
-	      <a id="btnRecuperaLink"  class="modal-action modal-close waves-effect waves-green btn-flat">Aceptar</a>
-	    </div>
-  </div>
-</div>
+	</div>
+
+	
+
+	<div id="dropDownSelect1">
+	
+<!--===============================================================================================-->
+	<script src="Login_v9/vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Login_v9/vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Login_v9/vendor/bootstrap/js/popper.js"></script>
+	<script src="Login_v9/vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Login_v9/vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="Login_v9/vendor/daterangepicker/moment.min.js"></script>
+	<script src="Login_v9/vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="Login_v9/vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="Login_v9/js/main.js"></script>
+
+	</div>
+
+</body>
+</html>
