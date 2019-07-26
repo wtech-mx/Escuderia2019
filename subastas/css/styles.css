@@ -530,6 +530,8 @@ label[for="placa"] {
 	margin: 10px 5% 10px;
 	line-height: 50px;
 }
+/*
+
 #btnLogin, .btnLogin {
 	float:left;
 	height: 50px;
@@ -545,6 +547,8 @@ label[for="placa"] {
 #btnLogin:hover {
 	box-shadow: 0 0 6px rgba(0,0,0,0.75);
 }
+*/
+
 #dobday {
 	margin-left: 5%;
 	height: 30px;

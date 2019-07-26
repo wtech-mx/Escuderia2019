@@ -13,7 +13,7 @@ unregister_GLOBALS();
 
 	<head>
 		<meta charset="utf-8">
-		<title>::Escudería::</title>
+		<title>ago</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		<link href="https://fonts.googleapis.com/css?family=Oswald:300,400,700&amp;subset=latin-ext" rel="stylesheet"/>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700" rel="stylesheet"/>
@@ -48,7 +48,7 @@ unregister_GLOBALS();
 
 	</head>
 
-	<body>
+	       <body class="skin-default-dark fixed-layout"> 
 		<!-- contenedor "absoluto"" del sitio -->
 		<main class="mainContainer">
 			<!-- contenedor del encabezado del sitio -->

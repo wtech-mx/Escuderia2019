@@ -3386,6 +3386,7 @@ tbody.collapse.show {
   padding-bottom: 0.5rem; }
 
 .navbar-collapse {
+  background: #2b2f3a;
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   -webkit-box-flex: 1;
